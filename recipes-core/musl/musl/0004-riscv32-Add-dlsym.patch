@@ -1,10 +1,9 @@
-From 1c641b69c06aefa950c2dbc8d6efe85227af3d4b Mon Sep 17 00:00:00 2001
+From 6aa6704a43f53d7027b888ddfa1ac67895c320c9 Mon Sep 17 00:00:00 2001
 From: Stefan O'Rear <sorear@fastmail.com>
 Date: Thu, 3 Sep 2020 05:46:33 -0400
-Subject: [PATCH 06/12] riscv32: Add dlsym
+Subject: [PATCH 04/10] riscv32: Add dlsym
 
 Identical to riscv64.
-
 Upstream-Status: Pending
 Signed-off-by: Khem Raj <raj.khem@gmail.com>
 ---
@@ -25,5 +24,5 @@ index 00000000..2bafd72d
 +	mv a2, ra
 +	tail __dlsym
 -- 
-2.42.0
+2.44.0
 

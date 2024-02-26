@@ -1,0 +1,22 @@
+--- a/include/seccomp-syscalls.h	2021-12-12 10:19:33.943266860 -0800
++++ b/include/seccomp-syscalls.h	2021-12-12 15:16:27.204597588 -0800
+@@ -284,6 +284,7 @@
+ #define __PNR_clock_nanosleep			-10250
+ #define __PNR_gettimeofday			-10251
+ #define __PNR_fcntl				-10252
++#define __PNR_clock_adjtime			-10253
+ 
+ /*
+  * libseccomp syscall definitions
+@@ -435,7 +436,11 @@
+ 
+ #define __SNR_chroot			__NR_chroot
+ 
++#ifdef __NR_clock_adjtime
+ #define __SNR_clock_adjtime		__NR_clock_adjtime
++#else
++#define __SNR_clock_adjtime		__PNR_clock_adjtime
++#endif
+ 
+ #ifdef __NR_clock_adjtime64
+ #define __SNR_clock_adjtime64		__NR_clock_adjtime64
