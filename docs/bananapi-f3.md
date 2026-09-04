@@ -69,12 +69,6 @@ Flash `core-image-full-cmdline-bananapi-f3.rootfs.wic.gz` onto a uSD card (assum
 $ sudo bmaptool copy build/tmp/deploy/images/bananapi-f3/core-image-full-cmdline-bananapi-f3.rootfs.wic.gz /dev/sdx
 ```
 
-Then, you also need to flash the `bootinfo_sd.bin` file at the very beginning of the SD card (not part of the WIC image yet):
-
-```
-$ sudo dd if=build/tmp/deploy/images/bananapi-f3/bootinfo_sd.bin of=/dev/sdx
-```
-
 Boot the Board
 ==============
 

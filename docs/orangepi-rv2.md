@@ -69,12 +69,6 @@ Flash `core-image-full-cmdline-orangepi-rv2.rootfs.wic.gz` onto a uSD card (assu
 $ sudo bmaptool copy build/tmp/deploy/images/orangepi-rv2/core-image-full-cmdline-orangepi-rv2.rootfs.wic.gz /dev/sdx
 ```
 
-Then, you also need to flash the `bootinfo_sd.bin` file at the very beginning of the SD card (not part of the WIC image yet):
-
-```
-$ sudo dd if=build/tmp/deploy/images/orangepi-rv2/bootinfo_sd.bin of=/dev/sdx
-```
-
 Boot the Board
 ==============
 
